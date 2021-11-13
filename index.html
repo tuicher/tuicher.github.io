@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Javier Raja</title>
+    <!--
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    
+    <meta content="Jonathon Toon" name="author">
+    <meta content="Jonathon Toon is a software designer working remotely from Sydney, Australia." name="description">
+    <meta content="design, software, product, new zealand, sydney, technology, javascript" name="keywords">
+    <meta content="dark light" name="color-scheme">
+    <meta content="#000000" name="theme-color">
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="Jonathon Toon" name="apple-mobile-web-app-title">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+    <meta content="Jonathon Toon" name="application-name">
+    <meta content="Jonathon Toon is a software designer working remotely from Sydney, Australia." name="msapplication-tooltip">
+    <meta content="/" name="msapplication-starturl">
+    <meta content="#000000" name="msapplication-navbutton-color">
+    <meta content="#000000" name="msapplication-TileColor">
+    <meta content="browserconfig.xml" name="msapplication-config">
+    <meta content="images/favicon-144.png" name="msapplication-TileImage">
+    <meta content="no" name="msapplication-tap-highlight">
+    <meta content="yes" name="full-screen">
+    <meta content="application" name="browsermode">
+    <meta content="JavierRaja" property="og:title">
+    <meta content="Jonathon Toon is a software designer working remotely from Sydney, Australia." property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="https://www.jonathontoon.com/" property="og:url"/>
+    <meta content="https://www.jonathontoon.com/images/og-image.png" property="og:image">
+    <meta content="image/png" property="og:image:type">
+    <meta content="1200" property="og:image:width">
+    <meta content="630" property="og:image:height">
+    <meta content="summary" name="twitter:card"/>
+    <meta content="" name="twitter:site"/>
+    <meta content="https://www.jonathontoon.com/" name="twitter:url"/>
+    <meta content="Jonathon Toon" name="twitter:title"/>
+    <meta content="Jonathon Toon is a software designer working remotely from Sydney, Australia." name="twitter:description"/>
+    <meta content="https://www.jonathontoon.com/images/og-image.png" name="twitter:image">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="images/favicon-16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="images/favicon-32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="images/favicon-48.png" rel="icon" sizes="48x48" type="image/png">
+    <link href="images/favicon-57.png" rel="icon" sizes="57x57" type="image/png">
+    <link href="images/favicon-76.png" rel="icon" sizes="76x76" type="image/png">
+    <link href="images/favicon-96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="images/favicon-128.png" rel="icon" sizes="128x128" type="image/png">
+    <link href="images/favicon-192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="images/favicon-228.png" rel="icon" sizes="228x228" type="image/png">
+    <link href="images/favicon-120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="images/favicon-152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="images/favicon-167.png" rel="apple-touch-icon" sizes="167x167">
+    <link href="images/favicon-180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="jonathontoon.webmanifest" rel="manifest">
+    <link href="fonts/Inter-Bold.woff" rel="preload" type="font/woff" as="font" crossorigin>
+    <link href="fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin>
+    -->
+    <style media="all" type="text/css">
+    
+    @-webkit-keyframes spin{
+        0%{transform:rotateY(0) rotateX(0)}
+        50%{transform:rotateY(1turn) rotateX(180deg)}
+        to{transform:rotateY(2turn) rotateX(1turn)}
+    }
+
+    @keyframes spin{
+        0%{transform:rotateY(0) rotateX(0)}
+        50%{transform:rotateY(1turn) rotateX(180deg)}
+        to{transform:rotateY(2turn) rotateX(1turn)}
+    }
+    *,a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{
+        margin:0;
+        padding:0;
+        border:0;
+        font:inherit;
+        vertical-align:baseline
+    }
+    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+        display:block
+    }
+    ol,ul{
+        list-style:none
+    }
+    blockquote,q{
+        quotes:none
+    }
+    blockquote:after,blockquote:before,q:after,q:before{
+        content:none
+    }
+    table{
+        border-collapse:collapse;
+        border-spacing:0
+    }
+    @font-face{
+        font-family:Inter;
+        font-style:normal;
+        font-weight:700;
+        font-display:swap;
+        src:url(../fonts/Inter-Bold.woff2) format("woff2"),url(../fonts/Inter-Bold.woff) format("woff")
+    }
+    :root{
+        --background-color:rgb(255, 234, 220);
+        --primary-text-color:#00003f;
+        --secondary-text-color:#00003a;
+        --link-text-color:rgb(255, 115, 0);
+        --face-size:256px;
+        --face-offset:calc(var(--face-size)/2);
+        --face-offset-reverse:calc(var(--face-size)/2*-1)
+    }
+    @media (prefers-color-scheme:dark){
+        :root{
+            --background-color:#00003f;
+            --primary-text-color:rgb(245, 245, 245);
+            --secondary-text-color:rgb(214, 214, 214);
+            --link-text-color: rgb(255, 145, 0);
+        }
+    }
+    body,html{
+        width:100%;
+        height:100%
+    }
+    body{
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+        font-size:1rem;
+        font-weight:400;
+        line-height:1.5;
+        color:var(--primary-text-color);
+        background-color:var(--background-color);
+        perspective:1000px;
+        perspective-origin:50% 100px;
+        transition:perspective .5s ease
+    }
+    h1,h2{
+        letter-spacing:-.025em;
+        font-weight:700
+    }
+    h2{
+        margin-bottom:1rem
+    }
+    a,p,span,ul{
+        font-family:Lucida Bright,Lucidabright,"Lucida Serif",Lucida,"DejaVu Serif","Bitstream Vera Serif","Liberation Serif",Georgia,Times New Roman,serif;
+        letter-spacing:-.01em
+    }
+    p{
+        margin-bottom:2rem
+    }
+    a,span,ul{
+        color:var(--link-text-color);
+        text-decoration: none;
+    }
+    p,span,ul{
+        color:var(--secondary-text-color)
+    }
+    ul{
+        list-style-type:disc
+    }
+    li{
+        margin-left:1.5rem
+    }
+    main{
+        position:relative;
+        margin:3rem 2rem 2rem;
+        height:100%
+    }
+    canvas{
+        display:none
+    }
+    article,header{
+        margin-bottom:3rem
+    }
+    footer{
+        font-size:.70rem;
+        margin-bottom:4rem
+    }
+    #visual{
+        position:absolute;
+        top:-70px;
+        left:-70px;
+        height:var(--face-size);
+        transform:scale(.25)
+    }
+    #cube,#cube img,#visual{
+        width:var(--face-size)
+    }
+    #cube{
+        position:relative;
+        -webkit-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;
+        transform-style:preserve-3d;
+        transform-origin:var(--face-offset) var(--face-offset);
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        pointer-events:none
+    }
+    #cube img{
+        position:absolute;
+        height:var(--face-size)
+    }
+    #cube .face-1{
+        transform:translateZ(var(--face-offset))
+    }
+    #cube .face-3{
+        transform:translateZ(var(--face-offset-reverse)) rotateY(180deg)
+    }
+    #cube .face-2{
+        transform:rotateY(-270deg) translateX(var(--face-offset));
+        transform-origin:top right
+    }
+    #cube .face-4{
+        transform:rotateY(270deg) translateX(var(--face-offset-reverse));
+        transform-origin:center left
+    }
+    #cube .face-0{
+        transform:rotateX(-90deg) translateY(var(--face-offset-reverse));
+        transform-origin:top center
+    }
+    #cube .face-5{
+        transform:rotateX(90deg) translateY(var(--face-offset));
+        transform-origin:bottom center
+    }
+    #information{
+        position:absolute;
+        top:180px
+    }
+    #projects ul li{
+        margin-bottom:1.5rem
+    }
+    @media screen and (min-width:32rem){
+        body{
+            font-size:1.2rem
+        }
+        main{
+            margin:6rem 5rem 5rem;
+            max-width:56rem
+        }
+        article,footer,header{
+            margin-bottom:5rem
+        }
+        #information{
+            position:absolute;
+            top:200px
+        }
+        footer{
+            font-size:0.7rem
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="visual">
+        <div id="cube"></div>
+      </section>
+      <section id="information">
+        <header>
+          <h1>Javier Raja Huertas</h1>
+          <p>Game Developer</p>
+        </header>
+        <article>
+          <h2>About</h2>
+          <p>Hi, I'm a young spannish student and indie game developer. At the moment I haven't got any published title,
+              but surely i will get some soon. You can reach me on my <a href="https://twitter.com/tuicher" target="_blank">Twitter</a>, 
+              <a href="https://github.com/tuicher" target="_blank">GitHub</a> or itch.io, to get informed on real time about all my projects</p>
+        </article>
+        <!--
+        <article>
+          <h2>Work</h2>
+          <p>Presently I lead design at <a href="https://www.moneytree.jp/" target="_blank">Moneytree</a>, where we are building a privacy-first financial data platform. Before that I worked across product and design teams at <a href="https://www.rainforestqa.com/" target="_blank">Rainforest</a>, <a href="https://www.techinasia.com/mercari-acquires-origami/" target="_blank">Origami</a>, <a href="https://www.xero.com/" target="_blank">Xero</a> and <a href="https://www.facebook.com/" target="_blank">Facebook</a>.</p>
+          <p>For more details you can find the latest version of <a href="https://www.figma.com/proto/y69rFAepafAfTSSHfDSLUi/Portfolio-Jonathon-Toon?page-id=0%3A1&node-id=3%3A759&viewport=204%2C343%2C0.07337158918380737&scaling=contain" target="_blank">my resume here</a>.</p>
+        </article>
+        -->
+        <article>
+          <h2>Interests</h2>
+          <p>Things I spend my time reading over, tinkering with and learning about.</p>
+          <ul>
+            <li>Computer science</li>
+            <li>Cryptography</li>
+            <li>Game Design</li>
+            <li>TypeScript / Lua</li>
+          </ul>
+        </article>
+        
+        <article id="projects">
+          <h2>Projects</h2>
+          <p>A few ideas that I've gone ahead and built in my spare time. You can support them if you like by <a href="https://www.buymeacoffee.com/KLEzuxU" target="_blank">donating here</a>.</p>
+          <ul>
+            <li><a href="https://github.com/jonathontoon/manifest/" target="_blank">Manifest</a> — An incredibly simple grid-based pinboard for note taking.</li>
+            <li><a href="https://github.com/jonathontoon/tweet-tray/" target="_blank">Tweet Tray</a> — Compose tweets quickly from the desktop without any distractions.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Contact</h2>
+          <p>I'd be happy to write back if you'd like to send me an <a href="mailto:iivaj@icloud.com" target="_blank">email</a>. Otherwise you can follow me on <a href="https://twitter.com/jonathontoon/" target="_blank">Twitter</a>, <a href="https://github.com/jonathontoon/" target="_blank">Github</a> or <a href="https://linkedin.com/in/jonathontoon/" target="_blank">LinkedIn</a>.</p>
+        </article>
+        <footer>
+          <p>The information on this web page was last updated Thusrday, November 11, 2021.</p>
+      </section>
+    </main>
+    <script type = "text/javascript" > (() => { "use strict";
+    const t = [
+            [1, 0, 2],
+            [1, 2, 0],
+            [3, 2, 1],
+            [5, 2, 3],
+            [0, 2, 5],
+            [1, 3, 4]
+        ],
+        e = ["Top", "Front", "Right", "Back", "Left", "Bottom"],
+        n = 768;
+    let a, o, c;
+    const s = ([t, e, c]) => {
+        const s = new Uint8ClampedArray(2359296);
+        for (let a = 0; a < s.length; a += 4) {
+            const [o, d, r, i] = [a, a + 1, a + 2, a + 3], m = a / 4, u = m % n, g = Math.floor(m / n), l = [0, u, g, 255, 255 - g, 255 - u];
+            s[o] = l[t], s[d] = l[e], s[r] = l[c], s[i] = 130
+        }
+        const d = new ImageData(s, n, n);
+        o.putImageData(d, 0, 0);
+        const r = new Image(n, n);
+        return r.src = a.toDataURL("image/png"), 
+        r};
+        document.addEventListener("DOMContentLoaded", () => {
+            (a = document.createElement("canvas")).setAttribute("width", "256"), a.setAttribute("height", "256"), o = a.getContext("2d"), c = document.getElementById("cube"), t.map(s).forEach((function(t, n) {
+                t.classList.add("face-" + n), t.setAttribute("alt", "Cube Face " + e[n]), c.appendChild(t)
+            }))
+        }, !1)
+    })()</script>
+<script type="text / javascript ">"serviceWorker "in navigator&&navigator.serviceWorker.register("service - worker.js ",{scope:" / "})</script>
+  </body>
+</html>
