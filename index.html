@@ -106,7 +106,7 @@
         --primary-text-color:#00003f;
         --secondary-text-color:#00003a;
         --link-text-color:rgb(255, 115, 0);
-        --face-size:259px;
+        --face-size:320px;
         --face-offset:calc(var(--face-size)/2);
         --face-offset-reverse:calc(var(--face-size)/2*-1)
     }
@@ -195,15 +195,16 @@
     }
     #cube{
         position:relative;
-        -webkit-animation:spin 5s linear infinite;
-        animation:spin 25s linear infinite;
+        -webkit-animation:spin 10s linear infinite;
+        animation:spin 20s linear infinite;
         transform-style:preserve-3d;
         transform-origin:var(--face-offset) var(--face-offset);
         -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
         user-select:none;
-        pointer-events:none
+        pointer-events:none;
+        margin-bottom: 60px;
     }
     #cube img{
         position:absolute;
@@ -304,22 +305,25 @@
       </section>
     </main>
     <script type = "text/javascript" > (() => { "use strict";
-    const t = [
-            [1, 0, 2],
+    const t = [[1, 0, 2],
             [1, 2, 0],
             [3, 2, 1],
             [5, 2, 3],
             [0, 2, 5],
-            [1, 3, 4]
-        ],
+            [1, 3, 4]],
         e = ["Top", "Front", "Right", "Back", "Left", "Bottom"],
         n = 768;
     let a, o, c;
     const s = ([t, e, c]) => {
         const s = new Uint8ClampedArray(2359296);
         for (let a = 0; a < s.length; a += 4) {
-            const [o, d, r, i] = [a, a + 1, a + 2, a + 3], m = a / 4, u = m % n, g = Math.floor(m / n), l = [0, u, g, 255, 255 - g, 255 - u];
-            s[o] = l[t], s[d] = l[e], s[r] = l[c], s[i] = 130
+            const [o, d, r, i] = [a, a + 1, a + 2, a + 3], 
+            m = a / 4, u = m % n, g = Math.floor(m / n),
+            l = [0, u, g, 255, 255 - g, 255 - u];
+            s[o] = l[t], 
+            s[d] = l[e], 
+            s[r] = l[c], 
+            s[i] = 130
         }
         const d = new ImageData(s, n, n);
         o.putImageData(d, 0, 0);
@@ -332,6 +336,5 @@
             }))
         }, !1)
     })()</script>
-<script type="text / javascript ">"serviceWorker "in navigator&&navigator.serviceWorker.register("service - worker.js ",{scope:" / "})</script>
   </body>
 </html>
