@@ -44,8 +44,9 @@
         --background-color:rgb(255, 234, 220);
         --primary-text-color:#00003f;
         --secondary-text-color:#00003a;
-        --link-text-color:rgb(255, 115, 0);
+        --link-text-color:rgb(234, 114, 16);
         --face-size:320px;
+        --border-color: rgb(234, 114, 16);
         --face-offset:calc(var(--face-size)/2);
         --face-offset-reverse:calc(var(--face-size)/2*-1)
     }
@@ -54,6 +55,7 @@
             --background-color:#00003f;
             --primary-text-color:rgb(245, 245, 245);
             --secondary-text-color:rgb(214, 214, 214);
+            --border-color: rgb(255, 115, 0);
             --link-text-color: rgb(255, 145, 0);
         }
     }
@@ -196,4 +198,17 @@
         footer{
             font-size:1.0rem
         }
+    }
+
+    .featureImage {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        border: 3px solid var(--border-color);
+    }
+
+    video {
+        width: 50%;
+        border-radius: 20px; /* Ajusta este valor para controlar el redondeo de las esquinas */
+        overflow: hidden; /* Asegura que los bordes del contenido del video también se corten */
     }
