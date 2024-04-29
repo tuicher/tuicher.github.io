@@ -209,6 +209,6 @@
 
     video {
         width: 50%;
-        border-radius: 20px; /* Ajusta este valor para controlar el redondeo de las esquinas */
-        overflow: hidden; /* Asegura que los bordes del contenido del video también se corten */
+        border-radius: 20px;
+        overflow: hidden;
     }
