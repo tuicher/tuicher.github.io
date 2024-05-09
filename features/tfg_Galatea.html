@@ -12,17 +12,15 @@
                 
                 <header>
                     <h1>Simulation of Natural Effects for Marine Scenarios in Video Games</h1>
-                    <p><i>Shading</i> / <i>Unity</i></p>
+                    <p><i>Shading</i> / <i>Unity URP</i> - [2023]</p>
                     
                 </header>
                 <article>
                     <h2> Introduction </h2>
-                    <p> 
-                        Too many times on your life, even more if you are a computer graphics' /
-                        videogames' programmer, you end using a Linear interpolation (Usually named LERP).
-                        In this short code, you can generate images with <b>N</b> x <b>M</b> resolution by defining 4 colours. 
-                        Thoose colours will be positioned on the 4 corner of the image, then the algorithm will fill
-                        the rest of the image with a pretty color fade between them.
+                    <p>
+                        This project is my Final Degree Project, which was graded with the highest possible grade. Through it I built a technical demo with various special effects and their interactivity.
+                        During this project I learned a lot about how to structure all of them in the graphics pipeline, how to do GPU benchmarking and how to realise the harsh reality that 
+                        ‘the interesting thing is never an effect, but the interactivity between the effects on screen’.
                     </p>
                 </article>
 
@@ -32,9 +30,10 @@
                         <source src="../videos/TFG_OceanShader.mp4" type="video/mp4">
                     </video>
                     <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                        For the representation of the sea surface, I implemented the methodology described in <b>Jerry Tessendorf's</b> <i>famous</i> paper, <b>‘Simulating Ocean Water’ [2001]</b>.
+                        This approach incorporates an oceanographic spectrum and Fourier analysis to create wavelets that closely replicate the behaviour of the ocean.
+                        I developed a series of shaders responsible for translating the displacement of the sea surface into textures. These textures are then processed in screen space, generating the realistic effect.
+                        This method not only demonstrates a commitment to technical accuracy, but also ensures the creation of stunning and authentic images, capturing the dynamic essence of the sea water.
                     </p>
                 </article>
 
@@ -44,9 +43,9 @@
                         <source src="../videos/TFG_Clouds.mp4" type="video/mp4">
                     </video>
                     <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                        In addition, for real-time volumetric cloud development, I applied the principles described by <b>A. Schneider</b> in his publication ,<b>‘The Real-Time Volumetric Cloudscapes of Horizon: Zero Dawn’</b>, presented at <b>[SIGGRAPH 2015]</b>.
+                        This approach focuses on the generation of realistic clouds using volumetric modelling techniques, which allows the creation of blizzard formations with extraordinary dynamism without compromising real-time performance.
+                        I developed a noise synthesiser (<i>Worley, Perlin...</i>), and various shaders to integrate this technique, optimising cloud rendering to be visually stunning and computationally efficient.
                     </p>
                 </article>
 
@@ -56,22 +55,28 @@
                         <source src="../videos/TFG_Final.mp4" type="video/mp4">
                     </video>
                     <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                        Finally this is the look with all the effects implemented. In addition to the techniques explained in the previous sections, more components were added (<i>Day-Night Cycle, Skybox, Weather, Buoyancy, Wind, Sail Effects...</i>) 
+                        that work on the interactivity and data connection between the different effects (<i>hosted in the GPU</i>) and the different game entities (<i>that do their calculations in CPU</i>).
                     </p>
                 </article>
 
                 <article>
                     <h2> Download </h2>
-                    <p> 
-                        Here a link to my GitHub
+                    <p>
+                        Below you will find links to the original files:
+                    </p>
+                    <ul>
+                        <li><a href="https://github.com/tuicher/GALATEA-Ocean" >GitHub</a> Source Code.</li>
+                        <li><a href="resources/TFG_Javier_Raja_Huertas.pdf" download="TFG_Javier_Raja_Huertas.pdf">Download</a> Final Degree Project PDF.</li>
+                    </ul>
+                        
                     </p>
                 </article>
-                <footer>
-                    <p>The information on this web page was last updated: Sunday, April 28, 2024.</p>
-                </footer>
                 <p style="font-size: 1.0rem;"><a href="../index.html">Back to main page</a></p>
+
+                <footer>
+                    <p>The information on this web page was last updated: Thursday, May 9, 2024.</p>
+                </footer>
             </section>
         </main>
     </body>

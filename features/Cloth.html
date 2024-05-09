@@ -7,31 +7,38 @@
     </head>
     <body>
         <main>
+            <p style="font-size: 1.0rem;"><a href="../index.html">Back to main page</a></p>
+
             <section id="information">
+                
                 <header>
                     <h1>Cloth Physics Tool</h1>
-                    <p><i>Unity</i></p>
+                    <p><i>Unreal 5</i> / <i>Unity</i> - [2021]</p>
                 </header>
+
                 <article>
-                    <h2> Wind </h2>
-                    <video controls autoplay muted loop >
-                        <source src="../videos/Cloth_Wind.mp4" type="video/mp4">
-                    </video>
-                    <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                    <h2> Introduction </h2>
+                    <p>
+                        One of my first '<i>eye catcher</i>' projects. I made a tool to give a realistic cloth behavior to a given geometry.
+                        All this work was done at a very low level (at geometry vertex level) so it is easily replicable in many environments.
+                    </p>
+
+                    <p>
+                        Essentially, this tool captures quads from the supplied mesh and constructs a mesh of springs
+                        that move through a mass-spring system, simulated using a symplectic Euler integrator.
                     </p>
                 </article>
+
                 <article>
                     <h2> Spring Structure </h2>
                     <video controls autoplay muted loop >
                         <source src="../videos/Cloth_Spring.mp4" type="video/mp4">
                     </video>
+                    <p> </p>
                     <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                        When filling our geometry with springs, it's crucial to define how these springs will be created, as they ultimately determine the various properties of the mesh. 
+                        Commonly, in the field of structural engineering, it is specified whether a spring is functioning under tension (<i>'Extend springs'</i>) or compression (<i>'Bending springs'</i>). This same principle is applied in constructing the mesh. 
+                        In the videos, you can observe how this spring configuration impacts the mesh behavior.
                     </p>
                     <video controls autoplay muted loop >
                         <source src="../videos/Cloth_Extra.mp4" type="video/mp4">
@@ -39,15 +46,32 @@
                 </article>
 
                 <article>
-                    <h2> Collisions </h2>
-                    <video controls autoplay muted loop >
-                        <source src="../videos/Cloth_Collisions.mp4" type="video/mp4">
-                    </video>
-                    <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                    <h2> Interactivity </h2>
+                    <p>
+                        As is always the case when working on an effect or tool implementation, it is crucial to consider how this effect will interact with the various elements in the scene.
                     </p>
+                    <ul>
+                        <li><h3> Wind </h3>
+                            <video controls autoplay muted loop >
+                                <source src="../videos/Cloth_Wind.mp4" type="video/mp4">
+                            </video>
+                            <p> 
+                                There are so many ways to implement wind on a fabric since it is a force applied at the nodes of our simulation. However, a 'hack' has been chosen to enhance realism.
+                                In this tool, wind is calculated per triangle, and the wind force is applied depending on the orientation formed by the three vertices.
+                            </p>
+                        </li>   
+                        <li>
+                            <h3> Collisions </h3>
+                            <video controls autoplay muted loop >
+                                <source src="../videos/Cloth_Collisions.mp4" type="video/mp4">
+                            </video>
+                            <p> 
+                                One of the most natural ways to interact with an object in life is through collision. To achieve this effect, collision resolution has been implemented implicitly.
+                                This approach allows for much more realistic outcomes than those obtained by applying penalty forces or symplectic Euler methods.
+                            </p>
+                        </li>
+                    </ul>
+                    
                 </article>
 
                 <article>
@@ -56,17 +80,31 @@
                         <source src="../videos/Cloth_Bonus.mp4" type="video/mp4">
                     </video>
                     <p> 
-                        Here a short explanation of what's suposed to do the Code. It's too important
-                        to be as clear as posible. Trying to use less words posible, and adding code 
-                        to explain the concepts instead of large paragraphs.
+                        A brief excerpt from the entire journey (<i>weeks in those days</i>) leading up to the tool's implementation. While this project may not be the most technical or the most cutting-edge, I am undoubtedly very pleased with the outcome.
                     </p>
                 </article>
 
-                    <h2> Download </h2>
+                <article>
+                    <h2> Links </h2>
                     <p> 
-                        Here a link to my GitHub
+                        Here the GitHub source code. <i style="font-size:small;">will be released soon...</i>
                     </p>
                 </article>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      var videos = document.querySelectorAll('video'); 
+                      for (let i = 0; i < videos.length - 1; i++) { 
+                        videos[i].playbackRate = 3.0; 
+                      }
+                    });
+                  </script>
+
+                <p style="font-size: 1.0rem;"><a href="../index.html">Back to main page</a></p>
+                
+                <footer>
+                    <p>The information on this web page was last updated: Thursday, May 9, 2024.</p>
+                </footer>
             </section>
         </main>
     </body>
